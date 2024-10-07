@@ -84,7 +84,7 @@ export const Filters: React.FC<Props> = ({className}) => {
                     min={0}
                     max={1000}
                     step={10}
-                    value={[filters.prices.priceFrom || 0, filters.prices.priceTo || 2000]}
+                    value={[filters.prices.priceFrom || 0, filters.prices.priceTo || 1000]}
                     onValueChange={updatePrices}
                 />
             </div>

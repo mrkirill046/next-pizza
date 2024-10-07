@@ -1,6 +1,7 @@
 import {Nunito} from "next/font/google"
 import "./globals.css"
 import {ReactNode} from "react"
+import {Providers} from "@/components/shared/providers"
 
 const nunito = Nunito({
     subsets: ["cyrillic"],
@@ -22,7 +23,7 @@ export default function Layout({children}: Readonly<{ children: ReactNode }>) {
             </head>
 
             <body className={nunito.className}>
-                {children}
+                {/*<Providers>*/}{children}{/*</Providers>*/}
             </body>
         </html>
     )

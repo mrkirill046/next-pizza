@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useEffect} from "react"
 import {Filters} from "./use-filters"
 import qs from "qs"
 import {useRouter} from "next/navigation"
@@ -7,7 +7,7 @@ export const useQueryFilters = (filters: Filters) => {
     const isMounted = React.useRef(false)
     const router = useRouter()
 
-    React.useEffect(() => {
+    useEffect(() => {
         if (isMounted.current) {
             const params = {
                 ...filters.prices,
@@ -23,8 +23,6 @@ export const useQueryFilters = (filters: Filters) => {
             router.push(`?${query}`, {
                 scroll: false
             })
-
-            console.log(filters, 999)
         }
 
         isMounted.current = true
