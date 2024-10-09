@@ -23,7 +23,7 @@ export default function Layout({children}: Readonly<{ children: ReactNode }>) {
             </head>
 
             <body className={nunito.className}>
-                {/*<Providers>*/}{children}{/*</Providers>*/}
+                <Providers>{children}</Providers>
             </body>
         </html>
     )

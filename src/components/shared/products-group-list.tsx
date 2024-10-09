@@ -44,6 +44,7 @@ export const ProductsGroupList: React.FC<Props> = (
                 {items.map((product: any, index: number) => (
                     <ProductCart
                         key={index}
+                        ingredients={product.ingredients}
                         id={product.id}
                         name={product.name}
                         price={product.items[0].price}
